@@ -1,0 +1,71 @@
+{% extends 'login/base.html' %}
+{% load staticfiles %}
+{% block title %}主页{% endblock %}
+{% block content %}
+    {% if request.session.is_login %}
+    <h1>你好,{{ request.session.user_name }}！欢迎回来！</h1>
+    {% else %}
+    <h1>你尚未登录，只能访问公开内容！</h1>
+    {% endif %}
+{% endblock %}
+    <body>
+        {% block menu %}
+            <div id="menu">
+                <!--隐藏菜单-->
+                <div id="ensconce">
+                    <h2>
+                        <img src="{% static 'images/show.png' %}" alt="">
+                        主要菜单说明
+                    </h2>
+                </div>
+
+                <!--显示菜单-->
+                <div id="open">
+                    <div class="navH">
+                        请选择功能
+                        <span><img class="obscure" src="{% static 'images/obscure.png' %}" alt=""></span>
+                    </div>
+                    <div class="navBox">
+                        <ul>
+                            <li>
+                                <h2 class="obtain">添加<i></i></h2>
+                                <div class="secondary">
+                                    <h3><a href = "/add_production.html">添加生产商</a></h3>
+                                    <h3><a href = "/add_class.html">添加商品种类</a></h3>
+                                    <h3><a href = "/add_ingre.html">添加配料</a></h3>
+                                    <h3><a href = "/add_foods.html">添加食物</a></h3>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">修改<i></i></h2>
+                                <div class="secondary">
+                                    <h3><a href = "/add_production.html">修改生产商</a></h3>
+                                    <h3><a href = "/add_class.html">修改商品种类</a></h3>
+                                    <h3><a href = "/add_ingre.html">修改配料</a></h3>
+                                    <h3><a href = "/add_foods.html">修改食物</a></h3>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">删除<i></i></h2>
+                                <div class="secondary">
+                                    <h3><a href = "/add_production.html">删除生产商</a></h3>
+                                    <h3><a href = "/add_class.html">删除商品种类</a></h3>
+                                    <h3><a href = "/add_ingre.html">删除配料</a></h3>
+                                    <h3><a href = "/add_foods.html">删除食物</a></h3>
+                                </div>
+                            </li>
+                            <li>
+                                <h2 class="obtain">查询<i></i></h2>
+                                <div class="secondary">
+                                    <h3><a href = "/add_production.html">查询生产商</a></h3>
+                                    <h3><a href = "/add_class.html">查询商品种类</a></h3>
+                                    <h3><a href = "/add_ingre.html">查询配料</a></h3>
+                                    <h3><a href = "/add_foods.html">查询食物</a></h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </body>

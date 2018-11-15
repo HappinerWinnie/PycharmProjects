@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加食品</title>
+</head>
+<body>
+<form action="" method="POST">
+    <p>食物名称<input type="text" name = "name"></p>
+    <p>价格 <input type="text" name = "price"></p>
+    <p>ID <input type="text" name = "id_"></p>
+    <select name = "food_class" >
+        {% for item in cls %}
+             <option value = "{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+
+    <select name = "prod" >
+        {% for item in prod %}
+             <option value = "{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+
+    <select name = "ingres" multiple>
+        {% for item in ingres %}
+             <option value = "{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="add">
+</form>
+</body>
+</html>

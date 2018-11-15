@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            height: 57px;
+            padding-left: 150px;
+            padding-top: 14px;
+            border-bottom: solid 0.2px #46b8da;
+            width: 100%;
+        }
+
+        .wrap_row {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .input-wrap {
+            padding: 0;
+        }
+
+        #inputTextField {
+            height: 137px;
+            min-height: 1px;
+            width: 100%;
+            overflow: auto;
+            border: 1px solid #eee;
+            padding: 0 0;
+        }
+
+        #resultTextField {
+            border: 1px solid #eee;
+            background-color: #f0f0f0;
+            position: relative;
+            width: 50%;
+            min-height: 1px;
+            height: 137px;
+            overflow: auto;
+            padding: 0 0;
+        }
+        #trans_btn{
+            position: relative;
+            margin-top: 10px;
+            margin-right: 479px;
+            border: 0;
+            background: rgb(67,149,255);
+            padding: 0;
+            color:white;
+            width: 106px;
+            height: 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="inner">
+        <a href="/" class="logo-image" title="百度翻译">
+            <img src="//fanyi.bdstatic.com/static/translation/img/header/logo_cbfea26.png" alt="" width="96"
+                 height="31">
+        </a>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row wrap_row">
+        <div class="col-md-6 input-wrap">
+            <input id="inputTextField" type="text" placeholder="输入文字...">
+        </div>
+
+        <div class="col-md-6" id="resultTextField">
+        </div>
+        <input type="button" id="trans_btn" value="翻译">
+    </div>
+</div>
+<script src="../static/bootstrap.min.js"></script>
+<script src="../static/jquery-3.1.1.js"></script>
+<script>
+    $(function () {
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="trans-input-wrap">
+    <div class="image-wrap">
+        <div id="image-holder" style="background-image: none;"></div>
+    </div>
+    <div class="input-wrap" dir="ltr" style="height: auto;">
+        <a href="###" class="textarea-clear-btn" title="清空"
+           style="float: right; margin: 0px 0px 0px 10px; display: none;"></a>
+        <div class="doc-trans-file"></div>
+        <div class="textarea-wrap" style="height: 70px; padding-bottom: 0px;">
+            <div class="textarea-bg">
+                <span class="prompt-text">输入文字、网址 / 粘贴图片 / 拖入文档</span>
+            </div>
+            <div class="textarea-bg-text" id="textarea-bg-text"></div>
+            <textarea class="textarea" id="baidu_translate_input" data-height="70" style="height: 70px;"></textarea>
+        </div>
+        <ul class="sug-wrap" id="sug-wrap" style="display: none;"></ul>
+        <div class="input-operate">
+            <a href="###" class="operate-btn op-sound data-hover-tip" data-hover-tip-text="发音"
+               style="display: none;"><span class="icon-sound"></span></a>
+            <div class="op-favor-container">
+                <a href="javascript:void(0);" class="operate-btn op-favo data-hover-tip" data-hover-tip-text="添加到收藏夹"
+                   title="添加到收藏夹" style="display: none;"><span class="icon-favo"></span></a>
+                <div class="input-coll-extra-container">
+                    <div class="input-coll-group-container">
+                        <a class="close-input-coll-group" href="javascript:"></a>
+                        <header class="gray">
+                            添加收藏到&nbsp;<span class="black">(单选)</span>&nbsp;：
+                        </header>
+                        <hr>
+                        <div class="scroll-wrapper input-coll-ol scrollbar-inner" style="position: relative;">
+                            <ol class="input-coll-ol scrollbar-inner scroll-content"
+                                style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+                            </ol>
+                            <div class="scroll-element scroll-x">
+                                <div class="scroll-element_outer">
+                                    <div class="scroll-element_size"></div>
+                                    <div class="scroll-element_track"></div>
+                                    <div class="scroll-bar"></div>
+                                </div>
+                            </div>
+                            <div class="scroll-element scroll-y">
+                                <div class="scroll-element_outer">
+                                    <div class="scroll-element_size"></div>
+                                    <div class="scroll-element_track"></div>
+                                    <div class="scroll-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="new-coll-group-container">
+                            <a class="add-new-group" href="javascript:">新收藏分组</a>
+                            <div class="new-coll-group-input-container">
+                                <input type="text" placeholder="请输入新分组名称" class="new-group-name"><a
+                                    class="new-group-confirm disabled-new-group-confirm" href="javascript:">创建并添加</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-coll-group-err-msg"></div>
+                </div>
+                <script type="text/template" id="tpl-input-ol">
+                    {{each groupList as group}}
+                    <li class="input-coll-li" title="{{group.nameDisplayLegth > 14 ? group.name : ''}}"
+                        data-group-id="{{group.id}}" data-stat-id="18">{{group.name}}
+                    </li>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="trans-correct" style="display: none;">
+            </div>
+            <div class="trans-prompt" style="display: none;">
+                <p class="prompt-wrap">
+                </p>
+            </div>
+        </div>
+        <div id="upload-btn">
+            <div class="btn-dot"></div>
+            <div class="btn-dot"></div>
+            <div class="btn-dot"></div>
+            <div class="upload-tip">点击上传文件，支持pdf、docx、doc、jpg等格式</div>
+        </div>
+        <div id="upload-btn-hidden" class="webuploader-container">
+            <div class="webuploader-pick"></div>
+            <div id="rt_rt_1cs6alv0j9r1gvjta81msp5671"
+                 style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;"><input
+                    type="file" name="file" class="webuploader-element-invisible"
+                    accept="image/*,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf"><label
+                    style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
